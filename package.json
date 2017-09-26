@@ -1,0 +1,45 @@
+{
+  "name": "chlu-wallet-support-js",
+  "version": "0.0.1",
+  "description": "Support libraries for Chlu protocol reference implementation",
+  "scripts": {
+    "test": "node -r dotenv/config node_modules/.bin/jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ChluNetwork/chlu-wallet-support-js.git"
+  },
+  "keywords": [
+    "blockchain",
+    "cryptocurrencies",
+    "bitcoin",
+    "litecoin",
+    "zcash",
+    "ethereum",
+    "payments",
+    "reputation"
+  ],
+  "author": "Kulpreet Singh",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kulpreet/chlu-wallet-support-js/issues"
+  },
+  "homepage": "https://github.com/kulpreet/chlu-wallet-support-js#readme",
+  "dependencies": {
+    "bip39": "^2.4.0",
+    "bitcoinjs-lib": "^3.1.1",
+    "blockcypher": "^0.2.0",
+    "coinselect": "^3.1.11",
+    "dotenv": "4.0.0",
+    "es6-promisify": "^5.0.0",
+    "nock": "^9.0.18"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
+    "jest": "^21.1.0"
+  },
+  "engines": {
+    "node": "6.11.3"
+  }
+}
