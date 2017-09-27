@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - 6.11.3
+env:
+  global:
+  - NODE_PATH: src/
+  - secure: S5BeTicHz8Pz7Z2LYUaPpjXXuCDt6slfaZCTJKpwmCSwvsyktkAFU6YLXPSApEI6BHZ30OQJR/H48+B324Wg9H6Yi2zVDmobRdiDn0PN6XdTf0n8+Xh++l4M/jO2KAQ7wd6RKG+nfFDVG4ynmiuP89Gu7XD+fHinzF0aX1BKZxxg92M6+unFzjxU0l2Xi30Md9Hu09wAJ8/J2MrRdtuAafO3x24lcfF/csoFS404cohkxinbk7klHH7CuRfLUp3qybL5dwozLzT5oyDhKaeipHjDIL7bgYLw5FPLKUpKqXeYct3UCk5BzMN97rjE6DgvZj+cG/P9mZC0vGFk205ZKkqjtHfzOUVcO+DBY/E49W6pZX2QJzLEb+dAmcv8IpfSm057D1s/Uhfk9jvUtays+ayZUxfHKy6/L09bi6rfiAH1jl+JDWg/LhR2nBXxPd08NRl5NX24hk0T6w2H3ThHNTbYHXjIwZ0vjD0yWgHU9eIPVevT3vfF0r1CspY5SjBc5VhhBJfnnqGdVw8HxsQou9J+0PAMmnYZTmiFglgfzx3zN/KPovlszXPq44uJnRxHiy+ZbVXaxc2I/jMjDnBS5ZU/gNHfI59uXc24O0K4fy8srB79GtuzVv3l1clVKsfdm5fcRlleV6/Vln/bcnwHGxlvUQuzFs+xvbB7HO6ckpM=
+
