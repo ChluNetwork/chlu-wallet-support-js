@@ -1,4 +1,32 @@
 
+[![Build Status](https://travis-ci.org/ChluNetwork/chlu-wallet-support-js.svg?branch=master)](https://travis-ci.org/ChluNetwork/chlu-wallet-support-js)
+
+## Install ##
+
+```npm install chlu-wallet-support-js --save-dev```
+
+## Usage ##
+
+Simple transaction creation for use in Demo
+
+```
+    const importPrivateKey = new ImportPrivateKey()
+    const mnemonic = "mnemonic..."
+    const keyPath = "m/44'/1'/0'/0/0"
+
+    let txBuilder = new CreateChluTransaction()
+    txBuilder.importedKp = importPrivateKey.importFromMnemonic(mnemonic, keyPath)
+
+    return txBuilder.create(fromAddress, toAddress, amountSatoshis, changeAddress, 'ipfs content address')
+```
+
+## ToDo ##
+
+1. Vendor registration - import PK and saving encryption keys on IPFS and IPNS
+2. Customer registration - import PK and discover addresses and UTXOs
+
+-------------------------------------------------------------------------------
+
 ## What is Chlu? ##
 
 Chlu a decentralised reputation system.
