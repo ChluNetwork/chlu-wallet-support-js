@@ -1,2 +1,2 @@
-import CreateChluTransaction from 'create_chlu_transaction'
+import CreateChluTransaction from './src/create_chlu_transaction'
 export default CreateChluTransaction
