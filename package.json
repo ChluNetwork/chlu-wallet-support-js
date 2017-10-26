@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Support libraries for Chlu protocol reference implementation",
   "scripts": {
-    "test": "node -r dotenv/config node_modules/.bin/jest"
+    "test": "node -r dotenv/config node_modules/.bin/jest",
+    "watch": "babel src -d lib/src --watch"
   },
   "repository": {
     "type": "git",
