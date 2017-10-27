@@ -4,7 +4,8 @@
   "description": "Support libraries for Chlu protocol reference implementation",
   "scripts": {
     "test": "node -r dotenv/config node_modules/.bin/jest",
-    "watch": "babel src -d lib/src --watch"
+    "compile": "rimraf lib/* && babel src -d lib",
+    "prepublish": "npm run compile"
   },
   "repository": {
     "type": "git",
@@ -23,9 +24,9 @@
   "author": "Kulpreet Singh",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kulpreet/chlu-wallet-support-js/issues"
+    "url": "https://github.com/ChluNetwork/chlu-wallet-support-js/issues"
   },
-  "homepage": "https://github.com/kulpreet/chlu-wallet-support-js#readme",
+  "homepage": "https://github.com/ChluNetwork/chlu-wallet-support-js/blob/master/README.md",
   "dependencies": {
     "bip39": "^2.4.0",
     "bitcoinjs-lib": "^3.1.1",
