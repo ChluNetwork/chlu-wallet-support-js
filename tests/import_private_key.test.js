@@ -1,4 +1,4 @@
-import ImportPrivateKey from 'import_private_key'
+import ImportPrivateKey from '../src/import_private_key'
 import bitcoin from 'bitcoinjs-lib'
 
 test('loading a valid key with a valid path', () => {
