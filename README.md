@@ -11,7 +11,7 @@ Simple transaction creation for use in Demo
 
 ```
     const importPrivateKey = new ImportPrivateKey()
-    const mnemonic = "mnemonic..."
+    const mnemonic = importPrivateKey.generateNewMnemonic()
     const keyPath = "m/44'/1'/0'/0/0"
 
     let txBuilder = new CreateChluTransaction()

@@ -134,7 +134,8 @@ test('create transaction by getting utxo and using coinselect', () => {
 
   let amount = 1e4
   let txBuilder = new CreateChluTransaction()  
-  txBuilder.getImportedKey()
+  let mnemonic = "alter ankle cart harvest ecology sign athlete congress desert scare planet love"
+  txBuilder.getImportedKey(mnemonic)
   return txBuilder.create(boomAddress, zoomAddress, amount, null, 'Hello World').then((tx) => {
     expect(tx).not.toBeNull()
     expect(tx.outs[0].value).toEqual(amount)

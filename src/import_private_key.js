@@ -2,6 +2,10 @@ import bip39 from 'bip39'
 import bitcoin from 'bitcoinjs-lib'
 
 class ImportPrivateKey {
+
+  generateNewMnemonic() {
+    return bip39.generateMnemonic()
+  }
   
   importFromMnemonic (mnemonic, path) {
     

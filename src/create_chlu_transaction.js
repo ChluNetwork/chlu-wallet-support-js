@@ -9,10 +9,9 @@ import { isEmpty, map, forEach } from 'lodash'
 
 export default class CreateChluTransaction {
 
-  getImportedKey() {
-    const importPrivateKey = new ImportPrivateKey()
-    const mnemonic = "alter ankle cart harvest ecology sign athlete congress desert scare planet love"
+  getImportedKey( mnemonic ) {
     const keyPath = "m/44'/1'/0'/0/0"
+    const importPrivateKey = new ImportPrivateKey()
     this.importedKp = importPrivateKey.importFromMnemonic(mnemonic, keyPath)
     this.feeRate = 55
   }
