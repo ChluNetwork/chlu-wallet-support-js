@@ -3,8 +3,8 @@ import { isEmpty } from 'lodash'
 
 class PushTx {
 
-  constructor () {
-    this.blockchainClient = getBlockchainClient()
+  constructor (apiKey) {
+    this.blockchainClient = getBlockchainClient(apiKey)
   }
 
   push (txHash) {

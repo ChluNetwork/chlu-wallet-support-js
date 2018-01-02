@@ -1,5 +1,5 @@
 import blockcypher from 'blockcypher'
 
-export default function getBlockchainClient () {
-  return new blockcypher('btc', 'test3', process.env.BLOCKCYPHER_TOKEN)
+export default function getBlockchainClient (apiKey) {
+  return new blockcypher('btc', 'test3', apiKey)
 }

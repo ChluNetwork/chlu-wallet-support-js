@@ -9,25 +9,30 @@ import { isEmpty, map, forEach, get } from 'lodash'
 
 export default class CreateChluTransaction {
 
-  getImportedKey( mnemonic ) {
+  constructor (apiKey) {
+    this.pusher = new PushTx(apiKey)
+    this.getter = new GetUtxos(apiKey)
+  }
+
+  getImportedKey(mnemonic) {
     const keyPath = "m/44'/1'/0'/0/0"
     const importPrivateKey = new ImportPrivateKey()
+
     this.importedKp = importPrivateKey.importFromMnemonic(mnemonic, keyPath)
     this.feeRate = 55
   }
 
   getInputTxs(fromAddress, targets, feeRate) {
-    const getter = new GetUtxos()
-    return getter.getFromBlockchain(fromAddress).then((utxos) => {
+    return this.getter.getFromBlockchain(fromAddress).then((utxos) => {
       let unspents = map(utxos.txrefs, (tx) => ({ txId: tx.tx_hash, vout: tx.tx_output_n, value: tx.value }) )
       let { inputs, outputs, fee } = coinSelect(unspents, targets, feeRate)
+
       return { inputs, outputs, fee }
     })
   }
 
   pushTransaction(tx) {
-    const pusher = new PushTx()
-    return pusher.push(tx.toHex()).then((tx) => {
+    return this.pusher.push(tx.toHex()).then((tx) => {
       console.log(tx)
     })
   }
