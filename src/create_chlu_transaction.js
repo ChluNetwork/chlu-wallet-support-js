@@ -5,7 +5,7 @@ import ImportPrivateKey from './import_private_key'
 import GetUtxos from './get_utxos'
 import PushTx from './push_tx'
 
-import { isEmpty, map, forEach } from 'lodash'
+import { isEmpty, map, forEach, get } from 'lodash'
 
 export default class CreateChluTransaction {
 
@@ -59,7 +59,7 @@ export default class CreateChluTransaction {
       txb.addOutput(dataScript, 0)
 
       // only one input allowed for now
-      txb.addInput(inputs[0].txId, inputs[0].vout)
+      txb.addInput(get(inputs, '[0].txId', {}), get(inputs, '[0].vout', {}))
       txb.sign(0, this.importedKp)
       return txb.build()
     })
