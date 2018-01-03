@@ -10,7 +10,7 @@ test('use coinselect to find transaction inputs', () => {
 
   nock('https://api.blockcypher.com:443', {"encodedQueryParams":true})
     .get('/v1/btc/test3/addrs/mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb')
-    .query({"unspentOnly":"true", "token": process.env.BLOCKCYPHER_TOKEN})
+    .query({"unspentOnly":"true"})
     .reply(200, {
       "address":"mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb",
       "total_received":182464441,
@@ -84,7 +84,7 @@ test('create transaction by getting utxo and using coinselect', () => {
 
   nock('https://api.blockcypher.com:443', {"encodedQueryParams":true})
     .get('/v1/btc/test3/addrs/mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb')
-    .query({"unspentOnly":"true", "token": process.env.BLOCKCYPHER_TOKEN})
+    .query({"unspentOnly":"true"})
     .reply(200, {
       "address":"mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb",
       "total_received":182464441,

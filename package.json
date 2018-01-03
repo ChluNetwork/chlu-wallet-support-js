@@ -30,7 +30,7 @@
   "dependencies": {
     "bip39": "^2.4.0",
     "bitcoinjs-lib": "^3.1.1",
-    "blockcypher": "^0.2.0",
+    "blockcypher": "git+https://github.com/ChluNetwork/node-client.git",
     "coinselect": "^3.1.11",
     "dotenv": "4.0.0",
     "es6-promisify": "^5.0.0",
