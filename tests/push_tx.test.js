@@ -5,7 +5,6 @@ test('push failing raw hex transaction using blockcypher', () => {
 
   nock('https://api.blockcypher.com:443', {"encodedQueryParams":true})
     .post('/v1/btc/test3/txs/push', {"tx":"randomhash, not so random"})
-    .query({})
     .reply(400, {"error":"Couldn't decode hex: randomhash, not so random"},
            [ 'Server',
              'nginx/1.13.4',
@@ -27,8 +26,8 @@ test('push failing raw hex transaction using blockcypher', () => {
              '97' ])
   
   let pusher = new PushTx()
-  return pusher.push('randomhash, not so random').catch((tx) => {
-    expect(tx).toEqual('Couldn\'t decode hex: randomhash, not so random')
+  return pusher.push('randomhash, not so random').catch(({ error: { text } }) => {
+    expect(text).toEqual('{"error":"Couldn\'t decode hex: randomhash, not so random"}')
   })
 })
 
