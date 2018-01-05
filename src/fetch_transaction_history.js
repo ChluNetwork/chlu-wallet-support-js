@@ -2,8 +2,8 @@ import getBlockchainClient from './blockchain_client'
 
 class fetchTransactionHistory {
 
-  constructor () {
-    this.blockchainClient = getBlockchainClient()
+  constructor (apiKey) {
+    this.blockchainClient = getBlockchainClient(apiKey)
   }
 
   getFromBlockchain (address) {

@@ -5,7 +5,7 @@ test('load utxos from blocktrail for a given address', () => {
 
   nock('https://api.blockcypher.com:443', {"encodedQueryParams":true})
     .get('/v1/btc/test3/addrs/mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb')
-    .query({"unspentOnly":"true", "token":process.env.BLOCKCYPHER_TOKEN})
+    .query({"unspentOnly":"true"})
     .reply(200, {
       "address":"mjw2BcBvNKkgLvQyYhzRERRgWSUVG7HHTb",
       "total_received":182464441,
