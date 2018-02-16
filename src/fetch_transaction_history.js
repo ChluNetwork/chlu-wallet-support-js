@@ -1,22 +1,22 @@
 import getBlockchainClient from './blockchain_client'
 
-class fetchTransactionHistory {
+class FetchTransactionHistory {
+    
+    constructor (apiKey) {
+        this.blockchainClient = getBlockchainClient(apiKey)
+    }
 
-  constructor (apiKey) {
-    this.blockchainClient = getBlockchainClient(apiKey)
-  }
-
-  getFromBlockchain (address) {
-    return new Promise((resolve, reject) => {
-      this.blockchainClient.getAddrFull(address, {}, (err, txs) => {
-        if ( err ) {
-          reject(err)
-        } else {
-          resolve(txs)
-        }
-      })
-    })
-  }
+    getFromBlockchain (address) {
+        return new Promise((resolve, reject) => {
+            this.blockchainClient.getAddrFull(address, {}, (err, res) => {
+                if ( err ) {
+                    reject(err)
+                } else {
+                    resolve(res.txs)
+                }
+            })
+        })
+    }
 }
 
-export default fetchTransactionHistory
+export default FetchTransactionHistory
