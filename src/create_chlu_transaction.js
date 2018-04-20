@@ -32,9 +32,7 @@ export default class CreateChluTransaction {
   }
 
   pushTransaction(tx) {
-    return this.pusher.push(tx.toHex()).then((tx) => {
-      console.log(tx)
-    })
+    return this.pusher.push(tx.toHex()).then(response => response.tx)
   }
   
   create(fromAddress, toAddress, amount, changeAddress, contentHash) {
