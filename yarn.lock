@@ -812,9 +812,9 @@ block-stream@*:
   dependencies:
     inherits "~2.0.0"
 
-"blockcypher@git+https://github.com/ChluNetwork/node-client.git":
+blockcypher@ChluNetwork/node-client:
   version "0.2.0"
-  resolved "git+https://github.com/ChluNetwork/node-client.git#95b44914d4c771a7c42c15b858ffac97fc8ee071"
+  resolved "https://codeload.github.com/ChluNetwork/node-client/tar.gz/95b44914d4c771a7c42c15b858ffac97fc8ee071"
   dependencies:
     superagent "^3.8.2"
 
