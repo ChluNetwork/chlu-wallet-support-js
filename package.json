@@ -1,16 +1,13 @@
 {
   "name": "chlu-wallet-support-js",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Support libraries for Chlu protocol reference implementation",
   "scripts": {
     "test": "node -r dotenv/config node_modules/.bin/jest",
     "compile": "rimraf lib/* && babel src -d lib",
     "prepublish": "npm run compile"
   },
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:ChluNetwork/chlu-wallet-support-js.git"
-  },
+  "repository": "https://github.com:ChluNetwork/chlu-wallet-support-js.git",
   "keywords": [
     "blockchain",
     "cryptocurrencies",
@@ -21,7 +18,11 @@
     "payments",
     "reputation"
   ],
-  "author": "Kulpreet Singh",
+  "author": {
+    "name": "Chlu",
+    "email": "info@chlu.io",
+    "url": "https://chlu.io"
+  },
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ChluNetwork/chlu-wallet-support-js/issues"
