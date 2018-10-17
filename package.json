@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/ChluNetwork/chlu-wallet-support-js/blob/master/README.md",
   "dependencies": {
-    "bip39": "^2.4.0",
-    "bitcoinjs-lib": "^3.1.1",
+    "bip39": "^2.5.0",
+    "bitcoinjs-lib": "^4.0.2",
     "blockcypher": "ChluNetwork/node-client",
     "coinselect": "^3.1.11",
     "dotenv": "4.0.0",
