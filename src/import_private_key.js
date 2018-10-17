@@ -10,7 +10,7 @@ class ImportPrivateKey {
   importFromMnemonic (mnemonic, path) {
     
     const seed = bip39.mnemonicToSeed(mnemonic)    
-    let hdNode = bitcoin.HDNode.fromSeedHex(seed, bitcoin.networks.testnet)
+    let hdNode = bitcoin.bip32.fromSeed(seed, bitcoin.networks.testnet)
     
     for ( let component of this.getPathComponents(path) ) {
       if ( this.isHardened(component) ) {
@@ -20,7 +20,7 @@ class ImportPrivateKey {
       }
     }
           
-    return hdNode.keyPair
+    return hdNode
   }
   
   
